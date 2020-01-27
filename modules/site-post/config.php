@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'site-post',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/site-post.git',
     '__license' => 'MIT',
     '__author' => [
@@ -43,7 +43,7 @@ return [
         'classes' => [
             'SitePost\\Controller' => [
                 'type' => 'file',
-                'base' => 'modules/site-post/controller'
+                'base' => ['modules/site-post/controller','app/site-post/controller']
             ],
             'SitePost\\Library' => [
                 'type' => 'file',
