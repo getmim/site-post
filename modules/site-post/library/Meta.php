@@ -24,7 +24,7 @@ class Meta
 
         $def_meta = [
             'title'         => $page->title,
-            'description'   => $page->content->text->chars(160),
+            'description'   => $page->content->chars(160),
             'schema'        => 'Article',
             'keyword'       => ''
         ];
