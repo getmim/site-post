@@ -7,6 +7,7 @@
 
 namespace SitePost\Library;
 
+use LibCacheOutput\Library\Cleaner;
 
 class Event
 {
