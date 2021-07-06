@@ -2,7 +2,7 @@
 /**
  * Meta
  * @package site-post
- * @version 0.0.1
+ * @version 0.1.0
  */
 
 namespace SitePost\Library;
@@ -83,6 +83,16 @@ class Meta
             'url'           => $page->page,
             // 'image'         => $meta_image
         ];
+
+        // amp html
+        if (module_exists('site-post-amp')) {
+            $route = \Mim::$app->req->route->name;
+            if ($route != 'sitePostAmp') {
+                $result['head']['amphtml'] = $page->amp;
+            }else{
+                $result['head']['is_amp'] = true;
+            }
+        }
 
         return $result;
     }
